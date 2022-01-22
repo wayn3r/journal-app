@@ -1,0 +1,39 @@
+.google-button {
+    $google-blue: #4285f4;
+    $button-active-blue: #1669f2;
+
+    @include center-grid-content;
+    grid-template-columns: max-content 1fr;
+
+    height: 4.5rem;
+    padding: 1px;
+    margin: 2px 0;
+    background-color: $google-blue;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+
+    .google-icon-wrapper {
+        @include center-grid-content;
+        height: 4.25rem;
+        width: 4.25rem;
+        border-radius: 2px;
+        background-color: $white;
+    }
+    .google-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .button-text {
+        align-self: center;
+        color: $white;
+        letter-spacing: 0.2px;
+    }
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}

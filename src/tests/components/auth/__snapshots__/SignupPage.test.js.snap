@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <SignupPage /> debe renderizarse correctamente 1`] = `
+<div
+  className="auth__container animate__animated animate__fadeIn"
+>
+  <h1
+    className="auth__title"
+  >
+    Sign Up
+  </h1>
+  <form
+    className="auth__form"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="name"
+        onChange={[Function]}
+        placeholder=" "
+        type="text"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Name
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Invalid name
+      </span>
+    </div>
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="email"
+        onChange={[Function]}
+        placeholder=" "
+        type="email"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Email
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Invalid email
+      </span>
+    </div>
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="password"
+        onChange={[Function]}
+        placeholder=" "
+        type="password"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Password
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Invalid password
+      </span>
+    </div>
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="password2"
+        onChange={[Function]}
+        placeholder=" "
+        type="password"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Confirm password
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Invalid password
+      </span>
+    </div>
+    <button
+      className="button button--primary"
+      type="submit"
+    >
+      Sign Up
+    </button>
+    <a
+      className="link auth__link"
+      href="/auth/login"
+      onClick={[Function]}
+    >
+      Already registered?
+    </a>
+  </form>
+</div>
+`;

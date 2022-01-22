@@ -1,0 +1,21 @@
+$base-margin: 0.5rem;
+.mt {
+    &--1 {
+        margin-top: $base-margin;
+    }
+    &--5 {
+        margin-top: $base-margin * 5;
+    }
+}
+.mb {
+    &--1 {
+        margin-bottom: $base-margin;
+    }
+    &--5 {
+        margin-bottom: $base-margin * 5;
+    }
+}
+.cursor {
+    cursor: pointer;
+    user-select: none;
+}

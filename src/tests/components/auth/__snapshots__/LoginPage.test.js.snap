@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <LoginPage /> debe renderizarse correctamente 1`] = `
+<div
+  className="auth__container animate__animated animate__fadeIn"
+>
+  <h1
+    className="auth__title"
+  >
+    Login
+  </h1>
+  <form
+    className="auth__form"
+    noValidate={true}
+    onSubmit={[Function]}
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="email"
+        onChange={[Function]}
+        placeholder=" "
+        type="email"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Email
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Invalid email
+      </span>
+    </div>
+    <div
+      className="input-group"
+    >
+      <input
+        autoComplete="none"
+        className="input-group__input"
+        name="password"
+        onChange={[Function]}
+        placeholder=" "
+        type="password"
+        value=""
+      />
+      <label
+        className="input-group__label"
+      >
+        Password
+      </label>
+      <span
+        className="input-group__invalid-text"
+      >
+        Password
+      </span>
+    </div>
+    <button
+      className="button button--primary"
+      type="submit"
+    >
+      Login
+    </button>
+  </form>
+  <div
+    className="auth__social-networks"
+  >
+    <p>
+      Login with social networks
+    </p>
+    <button
+      className="google-button"
+      onClick={[Function]}
+    >
+      <div
+        className="google-icon-wrapper"
+      >
+        <img
+          alt="google button"
+          className="google-icon"
+          src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+        />
+      </div>
+      <p
+        className="button-text"
+      >
+        <b>
+          Sign in with google
+        </b>
+      </p>
+    </button>
+  </div>
+  <a
+    className="link auth__link"
+    href="/auth/signup"
+    onClick={[Function]}
+  >
+    Create new account
+  </a>
+</div>
+`;

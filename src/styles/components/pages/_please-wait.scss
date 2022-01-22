@@ -1,0 +1,37 @@
+.please-wait {
+    @include center-grid-content;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $primary;
+    color: $white;
+
+    &__title {
+        font-size: 7rem;
+        font-weight: 900;
+    }
+    &__message {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2rem;
+    }
+    &__icon {
+        display: inline-block;
+        position: relative;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        border: 2.5px solid;
+        border-color: $white transparent $white $white;
+        animation: rotate 1s infinite linear;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

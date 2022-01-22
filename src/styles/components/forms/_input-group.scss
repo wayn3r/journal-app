@@ -1,0 +1,62 @@
+.input-group {
+    display: grid;
+    position: relative;
+    $padding: 1.6rem;
+    margin-top: calc($padding / 2);
+    &__input,
+    &__label {
+        color: $dark-gray;
+        font-size: 1.6rem;
+    }
+    &__input {
+        height: 2rem;
+        padding: 1.6rem $padding;
+        border: 0px;
+        border-bottom: 2px solid $light-gray;
+        transition: border-bottom-color 0.3s ease;
+        &::placeholder {
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 200ms ease, transform 200ms ease;
+        }
+        &:focus {
+            outline: none;
+            border-bottom-color: $primary;
+            &::placeholder {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        &:invalid {
+            border-bottom-color: $red;
+        }
+    }
+    &__invalid-text,
+    &__label {
+        user-select: none;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        transform: translate($padding, calc(50% - 2px));
+        transition: color 200ms ease, opacity 200ms ease, font-size 200ms ease,
+            transform 200ms ease;
+    }
+    &__input:not(:placeholder-shown) ~ &__label,
+    &__input:not(:placeholder-shown) ~ &__invalid-text,
+    &__input:focus ~ &__invalid-text,
+    &__input:focus ~ &__label {
+        transform: translate(0, -100%);
+        font-size: 1.2rem;
+    }
+    &__invalid-text,
+    &__input:invalid ~ &__label {
+        opacity: 0;
+    }
+    &__input:invalid:not(:focus) ~ &__label,
+    &__input:invalid:focus ~ &__invalid-text {
+        color: $red;
+        opacity: 1;
+    }
+}

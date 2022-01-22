@@ -1,0 +1,45 @@
+.button {
+    background-color: transparent;
+    border: none;
+    color: currentColor;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: filter 200ms ease;
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &--primary {
+        background-color: $primary;
+        color: $white;
+        border-radius: 2px;
+        transition: background-color 300ms ease-out;
+
+        &:hover {
+            background-color: darken($color: $primary, $amount: 10);
+        }
+
+        &:disabled {
+            background-color: lighten($color: $primary, $amount: 10);
+        }
+    }
+
+    &--danger {
+        background-color: $red;
+        color: $white;
+
+        transition: background-color 300ms ease-out;
+
+        &:hover {
+            background-color: darken($color: $red, $amount: 10);
+        }
+
+        &:disabled {
+            background-color: lighten($color: $red, $amount: 10);
+        }
+    }
+}

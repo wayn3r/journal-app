@@ -1,0 +1,18 @@
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &__image {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__name {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    &--thubnail &__image {
+        height: 7rem;
+        width: 7rem;
+    }
+}

@@ -1,0 +1,62 @@
+.auth {
+    &__main {
+        @include center-grid-content;
+
+        background-color: $primary;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: min-content;
+        grid-gap: 2rem;
+        padding: 2rem;
+
+        background-color: $white;
+        box-shadow: 0rem 3px $dark-gray;
+        border-radius: 2px;
+    }
+
+    &__title {
+        color: darken($color: $primary, $amount: 20);
+    }
+    &__form {
+        display: grid;
+        grid-gap: 1rem;
+    }
+    &__input {
+        position: relative;
+        color: $dark-gray;
+        border: 0px;
+        border-bottom: 2px solid $light-gray;
+        height: 2rem;
+        font-size: 1.6rem;
+        padding: 1.6rem;
+        transition: border-bottom-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: $primary;
+        }
+        &:invalid {
+            border-bottom-color: $red;
+        }
+    }
+    &__link {
+        justify-self: start;
+    }
+    &__social-networks {
+        display: grid;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    &__alert-error {
+        @include center-grid-content;
+        background-color: $red;
+        border-radius: 5px;
+        color: $white;
+        padding: 0.5rem;
+    }
+}

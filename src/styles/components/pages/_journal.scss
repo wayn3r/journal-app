@@ -1,0 +1,92 @@
+.journal {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    height: 100vh;
+    overflow: hidden;
+    &__main-content {
+        display: grid;
+    }
+    &__sidebar {
+        height: inherit;
+        display: grid;
+        align-content: start;
+        background-color: $dark-gray;
+        color: $white;
+        padding: 0.5rem 1rem;
+        grid-gap: 2rem;
+    }
+
+    &__sidebar-navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        min-height: 5rem;
+        width: max-content;
+        gap: 1rem;
+        max-width: 10rem;
+        min-width: 35rem;
+        .button {
+            font-size: 1.6rem;
+            align-self: center;
+            min-width: max-content;
+        }
+    }
+
+    &__new-entry {
+        justify-self: center;
+        display: grid;
+        grid-gap: 1rem;
+
+        color: $white;
+        transition: color 300ms ease;
+        &:hover {
+            color: darken($color: $white, $amount: 10);
+        }
+    }
+    &__entries {
+        display: grid;
+        padding: 1rem;
+        grid-gap: 1rem;
+        overflow: auto;
+        // &::-webkit-scrollbar{
+        // }
+    }
+    &__entry {
+        display: grid;
+        grid-template-columns: [image] min-content [start-body] 1fr [end-body] min-content [date];
+        overflow: hidden;
+        background-color: $white;
+        border-radius: 4px;
+        color: $dark-gray;
+    }
+    &__entry-picture {
+        grid-column: image / start-body;
+        height: auto;
+        width: 7.5rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__entry-body {
+        grid-column: start-body / end-body;
+        overflow: hidden;
+        padding: 1rem;
+    }
+    &__entry-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    &__entry-content {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    &__entry-date-box {
+        @include center-grid-content;
+        grid-column: end-body / date;
+        padding: 1rem;
+        text-align: center;
+        span {
+            font-size: 1.2rem;
+        }
+    }
+}

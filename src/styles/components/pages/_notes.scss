@@ -1,0 +1,54 @@
+.notes {
+    display: grid;
+    align-content: start;
+    grid-template-rows: max-content 1fr;
+    &__appbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary;
+        color: $white;
+        padding: 1rem 2rem;
+    }
+    &__appbar-button {
+        transition: background-color 300ms ease-out;
+        &:hover {
+            background-color: darken($color: $primary, $amount: 10);
+        }
+    }
+    &__content {
+        display: grid;
+        padding: 2rem;
+    }
+    &__form {
+        display: grid;
+        grid-template-rows: max-content 1fr max-content;
+    }
+    &__textarea,
+    &__input {
+        border: 0;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__input {
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    &__textarea {
+        color: $dark-gray;
+        font-size: 2rem;
+        resize: none;
+    }
+
+    &__image img {
+        -webkit-user-drag: none;
+        box-shadow: 0.5rem 1rem 0.5rem rgba($dark-gray, 0.15);
+        height: 15rem;
+        width: auto;
+    }
+    &__delete-button {
+        padding: 1.5rem;
+        font-weight: 600;
+    }
+}
